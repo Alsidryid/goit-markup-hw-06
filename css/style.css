@@ -586,6 +586,52 @@ body {
   display: flex;
   align-items: baseline;
 }
+
+/* форма футера */
+.mailing {
+  margin-left: 93px;
+}
+.footer-form {
+  display: flex;
+}
+.input-form-ftr {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 358px;
+  background-color: var(--hero-foot-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.mail-btn {
+  display: flex;
+
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--bacnd-color);
+
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding-left: 28px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  border-color: var(--secondary-color);
+}
+.send-icon {
+  margin-left: 10px;
+}
+.label-form-ftr {
+  color: tomato;
+}
 /* Категории */
 
 .visually-hidden:not(:focus):not(:active) {
