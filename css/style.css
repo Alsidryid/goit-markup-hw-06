@@ -253,6 +253,7 @@ body {
   transition-property: transform, opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
 }
 .backdrop.is-hidden {
   transform: scale(0.7);
@@ -261,6 +262,7 @@ body {
   visibility: hidden;
 }
 .modal {
+  padding: 40px;
   position: absolute;
   width: 528px;
   height: 581px;
@@ -298,6 +300,24 @@ body {
 .close-btn:focus .svg-close,
 .close-btn:hover .svg-close {
   fill: var(--button-color);
+}
+/* форма модалки  */
+.recall {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.modal-form {
+}
+.label-modal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 /* Наши плюсы */
 .services-picture {
@@ -609,6 +629,7 @@ body {
   background-color: var(--hero-foot-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-form-ftr:focus,
 .input-form-ftr:hover {
@@ -632,6 +653,7 @@ body {
   background-color: var(--secondary-color);
   border-radius: 4px;
   border-color: var(--secondary-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail-btn:focus,
 .mail-btn:hover {
@@ -641,9 +663,7 @@ body {
 .send-icon {
   margin-left: 10px;
 }
-.label-form-ftr {
-  color: tomato;
-}
+
 /* Категории */
 
 .visually-hidden:not(:focus):not(:active) {
