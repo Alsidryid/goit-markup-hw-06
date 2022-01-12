@@ -377,6 +377,7 @@ body {
 
   background-color: rgba(47, 48, 58, 0.8);
 }
+
 /* Наша команда */
 .our-team {
   background-color: var(--dysine-color);
@@ -598,7 +599,9 @@ body {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
+  padding-left: 16px;
 
+  color: var(--bacnd-color);
   display: flex;
   align-items: center;
   height: 50px;
@@ -607,9 +610,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
+.input-form-ftr:focus,
+.input-form-ftr:hover {
+  border-color: var(--secondary-color);
+}
 .mail-btn {
   display: flex;
-
   align-items: center;
 
   font-weight: 700;
@@ -617,6 +623,7 @@ body {
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--bacnd-color);
+  cursor: pointer;
 
   width: 200px;
   height: 50px;
@@ -626,6 +633,11 @@ body {
   border-radius: 4px;
   border-color: var(--secondary-color);
 }
+.mail-btn:focus,
+.mail-btn:hover {
+  background-color: var(--button-color);
+}
+
 .send-icon {
   margin-left: 10px;
 }
