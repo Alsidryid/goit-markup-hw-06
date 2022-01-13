@@ -301,6 +301,10 @@ body {
 .close-btn:hover .svg-close {
   fill: var(--button-color);
 }
+.input-modal:focus + .label-modal {
+  border-color: var(--button-color);
+  outline: 4 px solid violet;
+}
 /* форма модалки  */
 .recall {
   display: block;
@@ -316,6 +320,7 @@ body {
 }
 
 .label-modal {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -326,6 +331,8 @@ body {
   color: var(--primyry-text-color);
 }
 .input-modal {
+  padding-left: 38px;
+  z-index: 1;
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -347,6 +354,9 @@ body {
   margin-top: 4px;
 }
 .checkbox-text {
+  position: relative;
+  padding-left: 20px;
+  display: block;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -384,6 +394,33 @@ body {
 .modal-btn:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--button-color);
+}
+.modal-icon {
+  position: absolute;
+  z-index: 2;
+  bottom: 14px;
+  left: 15px;
+  fill: var(--main-text-color);
+}
+.check-area {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  background-color: var(--bacnd-color);
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+  top: 50%;
+  left: 20px;
+  transform: translate(-50%, -50%);
+}
+.label-modal:focus .input-modal {
+  border-color: var(--secondary-color);
+  background-color: var(--bacnd-color);
+}
+
+.label-modal:focus .modal-icon {
+  fill: var(--secondary-color);
 }
 /* Наши плюсы */
 .services-picture {
