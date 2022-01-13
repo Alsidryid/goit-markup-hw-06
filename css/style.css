@@ -301,10 +301,7 @@ body {
 .close-btn:hover .svg-close {
   fill: var(--button-color);
 }
-.input-modal:focus + .label-modal {
-  border-color: var(--button-color);
-  outline: 4 px solid violet;
-}
+
 /* форма модалки  */
 .recall {
   display: block;
@@ -315,8 +312,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-}
-.modal-form {
 }
 
 .label-modal {
@@ -339,12 +334,14 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   background-color: var(--bacnd-color);
-
+  outline: none;
   margin-top: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textarea-modal {
   width: 448px;
   height: 138px;
+  outline: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -352,6 +349,11 @@ body {
   resize: none;
   padding: 12px 16px;
   margin-top: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textarea-modal:focus {
+  outline: none;
+  border-color: var(--secondary-color);
 }
 .checkbox-text {
   position: relative;
@@ -361,6 +363,34 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.check-area {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  background-color: var(--bacnd-color);
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+  top: 50%;
+  left: 20px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-agree:checked + .check-area {
+  background-image: url(../images/check.svg);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+}
+.checkbox-agree:focus + .check-area {
+  border-color: var(--secondary-color);
+  outline: none;
 }
 .modal-link {
   color: #2196f3;
@@ -377,7 +407,6 @@ body {
   font-size: 16px;
   line-height: 1.88;
 
-  padding: auto;
   letter-spacing: 0.06em;
   color: var(--bacnd-color);
   cursor: pointer;
@@ -401,25 +430,14 @@ body {
   bottom: 14px;
   left: 15px;
   fill: var(--main-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.check-area {
-  display: block;
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  background-color: var(--bacnd-color);
-  border: 2px solid var(--main-text-color);
-  border-radius: 2px;
-  top: 50%;
-  left: 20px;
-  transform: translate(-50%, -50%);
-}
-.label-modal:focus .input-modal {
+.input-modal:focus {
   border-color: var(--secondary-color);
-  background-color: var(--bacnd-color);
+  outline: none;
 }
 
-.label-modal:focus .modal-icon {
+.input-modal:focus + .modal-icon {
   fill: var(--secondary-color);
 }
 /* Наши плюсы */
@@ -733,6 +751,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .input-form-ftr:focus,
 .input-form-ftr:hover {

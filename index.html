@@ -61,15 +61,13 @@
                     </button>
                     <div>
                         <b class="recall">Оставьте свои данные, мы вам перезвоним</b>
-                        <form class="modal-form">
-                            <div>
-                                <input class="input-modal" name="name" type="name" id="name" />
-                                <label for="name" class="label-modal">Имя</label>
-                               
+                        <form class="modal-form" autocomplete="off">
+                            <label for="name" class="label-modal">Имя
+                                <input class="input-modal" name="nik" type="text" id="name" />
                                 <svg class="modal-icon" width="12px" height="12px">
                                     <use href="./images/icons.svg#icon-human"></use>
                                 </svg>
-                            </div>
+                            </label>
                             <label class="label-modal">Телефон
                                 <input class="input-modal" name="telephone" type="tel"/>
                                 <svg class="modal-icon" width="13px" height="13px">
@@ -83,12 +81,13 @@
                                 </svg>
                             </label>
                             <label class="label-modal">Комментарий
-                                <textarea class="textarea-modal" type="text" placeholder="Введите текст"></textarea>
+                                <textarea class="textarea-modal"  name="coments" placeholder="Введите текст"></textarea>
                                                            
                             </label>
-                            <label class="checkbox-text">
-                                <span class="check-area"></span>
-                                <input class="visually-hidden"  type="checkbox">Соглашаюсь с рассылкой и принимаю <a class="modal-link" href="">Условия договора</a>
+                            <label class="checkbox-text" >
+                                
+                                <input class="checkbox-agree visually-hidden "  type="checkbox" ><span class="check-area"></span>Соглашаюсь с рассылкой и принимаю <a class="modal-link" href="">Условия договора</a>
+                                
                             </label>
                             <button type="submit" class="modal-btn">Отправить</button>
                         </form>
@@ -376,7 +375,7 @@
             </div>
             <div class="mailing">
                 <h3 class="footer-title">Подпишитесь на рассылку</h3>
-                <form class="footer-form">
+                <form class="footer-form" autocomplete="off">
                     <label class="label-form-ftr">
                         <input type="email" name="email" class="input-form-ftr" placeholder="E-mail" />
                     </label>
