@@ -293,10 +293,7 @@ body {
   transform: translate(-50%, -50%);
   fill: var(--logo-color);
 }
-.close-btn:focus,
-.close-btn:hover {
-  border-color: var(--button-color);
-}
+
 .close-btn:focus .svg-close,
 .close-btn:hover .svg-close {
   fill: var(--button-color);
